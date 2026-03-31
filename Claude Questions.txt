@@ -1,0 +1,88 @@
+  1. Companies / Clients                                                                                                                                                                                                          
+  - What information do you track per company? (e.g., company name, industry, point of contact, contract status, health score?)                                                                                                     
+- Is there a concept of "account health" or status (active, at-risk, churned)?                                                                                                                                                  
+  - Can one company have multiple contracts? Multiple contacts/POCs?    
+
+Answers
+- We need to be able to consolidate all the following information per company, please note that all details regarding contracts may be needed to record multiple times, once per contract : 
+Client Info: Client Name, Industry, Primary Contact with title and Contact Info, other POCs with title and contact info, Last Contact Date, Reason for contact, CSAT + NPS (Most recent and record of all historical)
+Contract Info: Contract start date, Contract Rate, Talent Name, Talent Rate, job description, % of Hours used last week, % of hours used last month, % of hours used last quarter, % of hours used last year, Talent Performance score (most recent and record of all historical), Talent Satisfaction score (most recent and record of all historical) Base MRR, Expected MRR, Actual MRR (Note that everything MRR related we might want to gate access to so if possible lets put this on a sub component that would be easy to lock behind role access if that was leadership's decision) 
+- No but I'd like to include one. Let's put in a placeholder initially and then we can work together to build the actual metric + define the logic. 
+- Yes each individual relationship between talent / client has a contract so its possible for a client to have multiple contracts active at the same time. Its also possible for us to have multiple POCs at a company so for POCs we should have their name, title, and contact info                                                                                                                                                           
+                                                                                                                                                                                                                                  
+  2. Talent                                                                                                                                                                                                                         - Talent appears as a key entity — can you explain what "talent" means in your business context? Are these workers/contractors that you place with client companies?                                                              
+- Is talent associated with specific companies/contracts, or managed separately?       
+
+Answers:
+- We are a talent marketplace where we connect global accounting with clients in the US that need experienced accountants. These are contractors that we place to fill part time or full time positions with a client's company. Once we place the individual we have no insight into their work apart from the hours they log and what they input into their time tracking software. Work quality and deliverables are all managed by the client. 
+- Talent is managed separately but for the purposes of the CRM Talent are also attached to a contract for a client. Our contracts include the client and the talent in question. It is possible for one client to have multiple contracts, if they filled multiple roles, with different talent. It is also possible for talent to be on multiple contracts with multiple companies, if they are being used in multiple part time engagements for example.                                                                                                                                                                                                                                                                                                                                                                              
+
+3. Issues / Tickets                                                 
+  - What does an issue lifecycle look like? (e.g., Open → In Progress → Resolved, or something more custom?)                                                                                                                      
+  - Who creates issues — internal team only, or can clients report them?                                                                                                                                                           
+ - What fields does an issue have? (severity, category, assigned owner, etc.)                                                                                                                                                                                                                                                                                                                                                                                      
+  
+Answers:
+- I would say Open > In Progress > Monitoring Solution > Resolved - sometimes we have to replace talent that is underperforming for example. In this scenario when we put the new person in we would have our solution in place but want to ensure it receives more attention for a few weeks before we mark it as resolved. 
+- All issues would be created by the internal team at this moment after a report from client, talent, or internal metrics. I'd like to have full client issue reporting but that is not part of this MVP. 
+
+4.Contracts                                                                                                                                                                                                                      - What does a contract record contain? (start/end date, value, type, status?)                                                                                                                                                    
+ - Is contract management a major focus, or more of a reference field on a company?                                                                                                                                                                                                                                                                                                                                                                                  
+
+Answers:
+- Client name, Talent name, Talent Rate, Trial Start Date, Long Term Engagement Start Date
+- More of a reference field
+
+5. Reports
+  - What are the 2-3 most important reports leadership wants to see? (e.g., open issues by client, contract renewals upcoming, issue resolution time?)                                                                              
+- When you say "auto-generate on intervals" — weekly? Monthly? What gets sent and to whom?    
+
+Answers
+- Upcoming contract renewals (renewals take place at the 1 year mark), MRR Actual vs Expected, Issue Report (how many open, time to solution in place, time to resolution) with context on issue type and clients involved as well as monetary concessions given to resolve issues 
+- This would vary based on the type of report and wouldn't need to be sent just viewed in the portal                                                     
+                                                                                                                                                                                                                                    6. Email / Check-ins                                                                      
+  - The check-in emails — are these sent to client contacts, internal team, or both?                                                                                                                                              
+  - Is the content templated, or AI-drafted? 
+
+Answers
+- Both clients and our internal team
+- It would be templated for our regular emails with just insertions of client name, talent name, company name, etc. We have email tooling we will integrate to support this so not something we need to be overly concerned with for the purpose of our demo. 
+                                                                                                                                                                                                                                                                                                                                                                                                                         7. Demo Data                                                                                                                                                                                                                    
+  - Do you have sample company names / issue types I should use, or should I invent realistic-sounding fake data?                                                                                                                 
+  - How many companies should be in the demo? (5? 20? More?)     
+
+Answers
+- You can make up company names. As for issue types our most common issues are (Talent Underperformance, Talent Resignation, Talent Raise Requested in $, Talent over reported working hours, Trial period extension requested, Talent underutilization)
+- Lets go with 10
+
+8. Tech Stack
+- What technology should the demo be built with?
+
+Answer:
+- React/TypeScript, as the team will be adding this functionality to internal tooling built with React/TypeScript.
+
+9. Navigation Structure
+- How should the app be organized/navigated?
+
+Answer:
+- Sidebar navigation works for now. What's important is being able to show all the views and functionality.
+
+10. Issue Fields
+- What specific fields should each issue have?
+
+Answer:
+- Severity/priority level, assigned internal owner, monetary concession amount, resolution notes, and issue type.
+- Additionally, the ability to track actions taken on the issue — a simple log where users can enter and save a "note" that outlines the action taken.
+
+11. Internal Team Members
+- Do we need a dedicated team member page/directory?
+
+Answer:
+- No dedicated page needed. Team members are just referenced as assigned owners on issues and as system users.
+- Demo team members: Dave, Kath, and Molly.
+
+12. Visual Style
+- Any brand colors, logo, or design preferences?
+
+Answer:
+- Clean and professional, no need to overly focus on design for this purpose.

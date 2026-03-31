@@ -1,0 +1,41 @@
+What is this demo?
+An in house CRM to align on features, page views, and kinds of functionality before beginning to actually build. 
+
+Who is this demo for?
+Company Leadership and CS lead to align on what functionality we want before involving our engineering team
+
+Core Use Cases
+- View And Edit individual information for client organizations (Notes, Contracts, Talent, Issues)
+- View and Edit Individual issues that occur (Resolution Steps, Associated Client / Talent)
+- View Master List of Clients
+- View Master list of Issues
+- Reports (reports on clients and issues that can be manually generated or auto generate on specific intervals/triggers) 
+- Ability to auto generate communications with clients via email on certain time intervals
+
+Key Entities
+- Contracts
+- Companies
+- Talent
+- Internal Team Members
+- Issues/Tickets
+
+Core Workflows
+- Update a company (add a contract, edit and add to notes)
+- Create, Update, and Resolve an issue/ticket
+- Check in with client (send email to check in on specified time intervals)
+- View, and export key reports
+
+Existing Tools
+- Google Sheets
+
+In Scope
+- Demo versions of features to align on page views and workflows
+- Populated with demo data
+
+Out of Scope
+- Actual functionality, integrations, authentication, etc
+- Actual working database, real data, etc
+
+Core Users
+- Customer Success Managers for functionality (updating company information, managing issues/tickets, producing reports)
+- Leadership (Viewing critical issues and report artifacts) 
